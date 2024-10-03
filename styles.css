@@ -1,0 +1,58 @@
+body {  
+    margin-top: 30px;  
+    padding: 30px;  
+    background-size: cover;  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    background-color: whitesmoke;
+}
+header {  
+    background-color: purple;  
+    position: fixed;  
+    left: 0;  
+    right: 0;  
+    top: 5px;  
+        height: 50px;  
+    display: flex;  
+    align-items: center;  
+}  
+header * {  
+    display: inline;  
+}  
+header li {  
+    margin: 20px;  
+}  
+header li a {  
+    color: white;  
+    text-decoration: none;  
+} 
+.darkgreen {
+    color: darkgreen
+}
+.darkslategray {
+    color: darkslategray
+}
+.darkblue {
+    color: darkblue
+}
+.darkred {
+    color: darkred
+}
+.red {
+    color: red
+}
+.blue {
+    color: blue
+}
+.green {
+    color: green
+}
+.orange {
+    color: orange
+}
+.darkgoldenrod {
+    color: darkgoldenrod
+}
+.purple {
+    color: purple
+}
