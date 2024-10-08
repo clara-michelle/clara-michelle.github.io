@@ -1,0 +1,86 @@
+body {  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+}
+.body-class {
+    background-color: aliceblue;
+    padding: 0% 1% 0%;
+}
+.header-class {
+    background-color: midnightblue;
+    color: lightgray;
+}
+.nav-class {
+    background-color: lightgray;
+    a {
+        color: midnightblue;
+        font-weight: bold;
+    }
+    color: midnightblue;
+    padding: 1% 1% 1%;
+}
+.title-class {
+    color: white;
+    padding: 1% 1% 0%;
+}
+.section-title-class {
+    color: black;
+}
+.text-class {
+    color: midnightblue;
+}
+.image-class {
+    border: 5px;
+    border-style: solid;
+    border-color: lightgray;
+    max-width: 99%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-class {
+    .input-class {
+        background-color: rgb(235, 235, 235);
+        width: 400px;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .label-class {
+        color: midnightblue;
+    }
+    .button-class {
+        background-color: midnightblue;
+        color: white;
+        font-size: large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+.footer-class {
+    background-color: midnightblue;
+    .text-class {
+        color: lightgray
+    }
+    margin-top: 100px;
+}
+.faq-question-class {
+}
+@media only screen and (max-width: 430px) {
+    body {  
+        font-size: large;
+    }
+    .nav-class {
+        background-color: lightgray;
+        a {
+            font-size: large;
+        }
+    }
+    .footer-class {
+        margin-top: 50px;
+    }
+    .form-class {
+        .input-class {
+            margin-bottom: 10px;
+        }
+    }
+  }
