@@ -1,0 +1,129 @@
+body {  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    background-color: aliceblue;
+  }
+a {
+    text-decoration: none;
+  }
+table {
+    border-spacing: 30px;
+}
+td {
+    vertical-align: top;
+}
+.main {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    background-color: aliceblue;
+}
+.grid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: top;
+    text-align: center;
+    background-color: white;
+}
+footer {
+    background-color: midnightblue;
+    font-size: smaller;
+    color: white;
+}
+.center { 
+    display: flex; 
+    height: 40px;
+    align-items: center; 
+    justify-content: center; 
+}
+.bg-img {
+    background-image: url("banner.jpg");
+    min-height: 300px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.container {
+    position: relative;
+    margin-left: 0px;
+    width: auto;
+}
+.topnav {
+    overflow: hidden;
+    background-color: midnightblue;
+}
+.topnav a {
+    float: inline-start;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: x-large;
+}
+.topnav a:hover {
+    background-color: darkolivegreen;
+    color: white;
+}
+.main {
+    margin-top: 330px;
+}
+.wideform {
+    input {
+        width: 100%;
+        height: 30px;
+    }
+    textarea {
+        width: 100%;
+        height: 200px;
+    }
+}
+button {
+    background-color: midnightblue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: x-large;
+    margin-right: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.center_buttons { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+} 
+.back_button {
+    background-color: whitesmoke;
+    border: solid 1px gray;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: x-large;
+    margin-top: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#open_about_us {
+    font-size: larger;
+    font-weight: bold;
+}
+#open_vol_needs {
+    font-size: larger;
+    font-weight: bold;
+}
+.center_table {
+    margin-right: auto;
+    margin-left: auto;
+}
+.np_table {
+    border-spacing: 5px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HelpHub</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="bg-img">
+                <div class="container">
+                  <div class="topnav">
+                    <a href="index.html"><img src="helphub_logo_light.png" alt="HelpHub Logo" height="30"></a>
+                    <a href="charities.html">Find a Charity</a>
+                    <a href="volunteer.html">Volunteer</a>
+                    <a href="register.html">Register a Charity</a>
+                    <a href="contact.html">Contact Us</a>
+                  </div>
+                </div>
+              </div>
+        </header>
+        <div class="main">
+            <p><h1>Find a Charity</h1></p>
+            <table class="center_table">
+                <tr class="grid">
+                    <td width="33%">
+                        <h4><a href="charity_profile_1.html">Pittsburgh Equality Center</a></h4>
+                        <p><a href="charity_profile_1.html"><img src="pec_logo.png" alt="Pittsburgh Equality Center logo" width="200"></a></p>
+                    </td>
+                    <td width="33%">
+                        <h4><a href="charity_profile_2.html">Animal Friends</a></h4>
+                        <p><a href="charity_profile_2.html"><img src="animal_friends_logo.png" alt="Animal Friends logo" width="300"></a></p>
+                    </td>
+                    <td width="33%">
+                        <h4><a href="charity_profile_3.html">412 Food Rescue</a></h4>
+                        <p><a href="charity_profile_3.html"><img src="412_food_rescue_logo.png" alt="412 Food Rescue logo" width="200"></a></p>
+                    </td>
+                </tr>
+            </table>
+            <p>
+                <div class="center_buttons">
+                    <button id="getNp">Browse Other Pittsburgh Non-Profits</button>
+                </div>
+                <div id="results"></div>
+            </div>
+            <script>
+                document.getElementById('getNp').addEventListener('click', getNp);
+                function getNp() {
+                    fetch('https://partners.every.org/v0.2/search/Pittsburgh?apiKey=pk_live_d07e1a535739cf275ecb319e50302959')
+                        .then((res) => {
+                            if (!res.ok) {
+                                throw new Error(`Sorry, there's been an error! Status: ${res.status}`);
+                            }
+                            return res.json();
+                        })
+                        .then((data) => {
+                            const resultsContainer = document.getElementById('results');
+                            let output = '<h2>Pittsburgh Non-Profits</h2>';
+                            if (data.nonprofits && data.nonprofits.length > 0) {
+                                data.nonprofits.forEach(function(np) {
+                                    output += `
+                                        <div>
+                                            <h3>${np.name}</h3>
+                                            <table class="np_table">
+                                                <tr>
+                                                    <td>Description:</td>
+                                                    <td>${np.description || "Description not available."}</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>Location:</td> 
+                                                   <td>${np.location || "Location not provided."}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>More Info:</td>
+                                                    <td><a href="${np.profileUrl}" target="_blank">${np.name} profile page</a></td>
+                                            </table>
+                                        </div>
+                                    `;
+                                });
+                            } else {
+                                output += '<p>No non-profits found.</p>';
+                            }
+                            resultsContainer.innerHTML = output;
+                        })
+                        .catch((error) => {
+                            console.error('Error fetching data:', error);
+                            const resultsContainer = document.getElementById('results');
+                            resultsContainer.innerHTML = `<p>Error loading data: ${error.message}</p>`;
+                        });
+                }
+            </script>
+            </p>
+        </div>
+        <footer>
+            <div class="center">
+                <p><small>Copyright &copy; 2024 HelpHub</small></p>
+            </div>
+        </footer>
+    </body>
+</html>

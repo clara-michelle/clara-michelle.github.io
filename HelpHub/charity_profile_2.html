@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HelpHub</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="charity_profile.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script> 
+            $(document).ready(function () {
+                $("#about_us").click(function () {
+                    var about_us_heading = $("#open_about_us");
+                    var about_us_panel = $("#about_us_panel");
+                    if (about_us_heading.text() === "> About Us") {
+                        about_us_heading.text("< About Us");
+                        about_us_panel.slideDown("slow");
+                    } else {
+                        about_us_heading.text("> About Us");
+                        about_us_panel.slideUp("slow");
+                    }
+                });
+            });
+            $(document).ready(function () {
+                $("#vol_needs").click(function () {
+                    var vol_needs_heading = $("#open_vol_needs");
+                    var vol_needs_panel = $("#vol_needs_panel");
+                    if (vol_needs_heading.text() === "> Volunteer Needs") {
+                        vol_needs_heading.text("< Volunteer Needs");
+                        vol_needs_panel.slideDown("slow");
+                    } else {
+                        vol_needs_heading.text("> Volunteer Needs");
+                        vol_needs_panel.slideUp("slow");
+                    }
+                });
+            });
+        </script>
+        <style> 
+            #about_us_panel, #about_us {
+                padding: 5px;
+            }
+            #about_us_panel {
+                padding: 5px;
+                margin-left: 30px;
+                background-color: white;
+                border: solid 1px gray;
+                display: none;
+            }
+            #vol_needs_panel, #vol_needs {
+                padding: 5px;
+            }
+            #vol_needs_panel {
+                padding: 5px;
+                margin-left: 30px;
+                background-color: white;
+                border: solid 1px gray;
+                display: none;   
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="bg-img">
+                <div class="container">
+                  <div class="topnav">
+                    <a href="index.html"><img src="helphub_logo_light.png" alt="HelpHub Logo" height="30"></a>
+                    <a href="charities.html">Find a Charity</a>
+                    <a href="volunteer.html">Volunteer</a>
+                    <a href="register.html">Register a Charity</a>
+                    <a href="contact.html">Contact Us</a>
+                  </div>
+                </div>
+              </div>
+        </header>
+        <div class="main">
+            <p><h1>Animal Friends</h1></p>
+            <table>
+                <tr>
+                    <td width="250px">
+                        <p><a href="https://www.thinkingoutsidethecage.org/" target="_blank"><img src="animal_friends_logo.png" alt="Animal Friends logo" width="250"></a></p>
+                    </td>
+                    <td>
+                        <div id="about_us">
+                            <p id="open_about_us">> About Us</p>
+                            <div id="about_us_panel">
+                                <p>For more than 80 years, <a href="https://www.thinkingoutsidethecage.org/" target="_blank">Animal Friends</a> has been saving, impacting, engaging, enriching and affecting the lives of the pets and people of our region.</p>
+                            </div>  
+                        </div>
+                        <div id="vol_needs">
+                            <p id="open_vol_needs">> Volunteer Needs</p>
+                            <div id="vol_needs_panel">
+                                <p>We are looking for volunteers to serve as animal handlers, behavior care assistants, chow wagon support, and administrative support.</p>
+                            </div>  
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table class="center_table" width="75%">
+                <tr>
+                    <td>
+                        <div class="center_buttons">
+                            <p><button id="volunteer_button" onclick="openForm()">Volunteer Now!</button></p>
+                        </div>    
+                        <form id="volunteer_form" action="https://httpbin.org/post" method="post" style="display: none;">
+                            <p>
+                                <label for="name">Name:</label>
+                                <input type="text" name="name" id="name" autocomplete="on" required autofocus>
+                            </p>
+                            <p>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" autocomplete="on" required>
+                            </p>
+                            <p>
+                                <label for="phone">Phone:</label>
+                                <input type="tel" name="phone" id="phone" autocomplete="on" required>
+                            </p>
+                            <fieldset>
+                                <legend>Charities you are interested in:</legend>
+                                <input type="checkbox" id="charity1" name="charity1" value="Pittsburgh Equality Center"><label for="charity1"> Pittsburgh Equality Center</label><br>
+                                <input type="checkbox" id="charity2" name="charity2" value="Animal Friends"><label for="charity2"> Animal Friends</label><br>
+                                <input type="checkbox" id="charity3" name="charity3" value="412 Food Rescue"><label for="charity3"> 412 Food Rescue</label><br>
+                            </fieldset>
+                            <p>
+                                <div class="center_buttons">
+                                    <button type="submit">Submit</button>
+                                    <button type="reset">Reset</button>
+                                </div>
+                            </p>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+
+            <p>
+                <button class="back_button"><a href="charities.html">&LeftArrowBar; Back to Find a Charity</a></button>
+        </div>
+        <footer>
+            <div class="center">
+                <p><small>Copyright &copy; 2024 HelpHub</small></p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HelpHub</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="bg-img">
+                <div class="container">
+                  <div class="topnav">
+                    <a href="index.html"><img src="helphub_logo_light.png" alt="HelpHub Logo" height="30"></a>
+                    <a href="charities.html">Find a Charity</a>
+                    <a href="volunteer.html">Volunteer</a>
+                    <a href="register.html">Register a Charity</a>
+                    <a href="contact.html">Contact Us</a>
+                  </div>
+                </div>
+              </div>
+        </header>
+        <div class="main">
+            <p>
+                <form id="volunteer_form" action="https://httpbin.org/post" method="post">
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" autocomplete="on" required autofocus>
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" autocomplete="on" required>
+                    </p>
+                    <p>
+                        <label for="phone">Phone:</label>
+                        <input type="tel" name="phone" id="phone" autocomplete="on" required>
+                    </p>
+                    <fieldset>
+                        <legend>Charities you are interested in:</legend>
+                        <input type="checkbox" id="charity1" name="charity1" value="Pittsburgh Equality Center"><label for="charity1"> Pittsburgh Equality Center</label><br>
+                        <input type="checkbox" id="charity2" name="charity2" value="Animal Friends"><label for="charity2"> Animal Friends</label><br>
+                        <input type="checkbox" id="charity3" name="charity3" value="412 Food Rescue"><label for="charity3"> 412 Food Rescue</label><br>
+                    </fieldset>
+                    <p>
+                        <div class="center_buttons">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </div>
+            </p>
+        </div>
+        <footer>
+            <div class="center">
+                <p><small>Copyright &copy; 2024 HelpHub</small></p>
+            </div>
+        </footer>
+    </body>
+</html>
