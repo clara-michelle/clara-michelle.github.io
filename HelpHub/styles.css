@@ -127,3 +127,9 @@ button {
 .np_table {
     border-spacing: 5px;
 }
+img {
+    max-width:100%;
+}
+.logo {
+    max-width: 90%;
+}
