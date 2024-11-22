@@ -5,34 +5,6 @@
         <link rel="stylesheet" href="styles.css">
         <script src="charity_profile.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script> 
-            $(document).ready(function () {
-                $("#about_us").click(function () {
-                    var about_us_heading = $("#open_about_us");
-                    var about_us_panel = $("#about_us_panel");
-                    if (about_us_heading.text() === "> About Us") {
-                        about_us_heading.text("< About Us");
-                        about_us_panel.slideDown("slow");
-                    } else {
-                        about_us_heading.text("> About Us");
-                        about_us_panel.slideUp("slow");
-                    }
-                });
-            });
-            $(document).ready(function () {
-                $("#vol_needs").click(function () {
-                    var vol_needs_heading = $("#open_vol_needs");
-                    var vol_needs_panel = $("#vol_needs_panel");
-                    if (vol_needs_heading.text() === "> Volunteer Needs") {
-                        vol_needs_heading.text("< Volunteer Needs");
-                        vol_needs_panel.slideDown("slow");
-                    } else {
-                        vol_needs_heading.text("> Volunteer Needs");
-                        vol_needs_panel.slideUp("slow");
-                    }
-                });
-            });
-        </script>
         <style> 
             #about_us_panel, #about_us {
                 padding: 5px;
@@ -93,6 +65,34 @@
                     </td>
                 </tr>
             </table>
+            <script> 
+                $(document).ready(function () {
+                    $("#about_us").click(function () {
+                        var about_us_heading = $("#open_about_us");
+                        var about_us_panel = $("#about_us_panel");
+                        if (about_us_heading.text() === "> About Us") {
+                            about_us_heading.text("< About Us");
+                            about_us_panel.slideDown("slow");
+                        } else {
+                            about_us_heading.text("> About Us");
+                            about_us_panel.slideUp("slow");
+                        }
+                    });
+                });
+                $(document).ready(function () {
+                    $("#vol_needs").click(function () {
+                        var vol_needs_heading = $("#open_vol_needs");
+                        var vol_needs_panel = $("#vol_needs_panel");
+                        if (vol_needs_heading.text() === "> Volunteer Needs") {
+                            vol_needs_heading.text("< Volunteer Needs");
+                            vol_needs_panel.slideDown("slow");
+                        } else {
+                            vol_needs_heading.text("> Volunteer Needs");
+                            vol_needs_panel.slideUp("slow");
+                        }
+                    });
+                });
+            </script>
             <table class="center_table" width="75%">
                 <tr>
                     <td>
